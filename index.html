@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- mdc-icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main-grid">
+      <!-- login -->
+      <dialog id="modal-login">
+        <div class="bg">
+          <div class="container">
+            <a href="#" id="esc" onclick="removeActive(modal)">
+              <span class="material-icons"> close </span>
+            </a>
+
+            <h5 class="title">login</h5>
+
+            <div class="">
+              <form action="" method="post">
+                <label>email</label>
+                <input type="email" placeholder="example@mail.com" />
+
+                <label>password</label>
+                <input type="password" placeholder="******" />
+                <br />
+                <a href="#" class="forgot-pass">forgot your password?</a>
+              </form>
+            </div>
+
+            <button class="form-login primary">
+              <span class="material-icons"> login </span>login
+            </button>
+
+            <hr />
+
+            <div class="">
+              <p>don't have any account?</p>
+              <a href="#"> sign up!</a>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- navbar -->
+      <header>
+        <!-- logo -->
+        <div class="logo-container">
+          <a id="logo" href="#" onclick="logo()">mf</a>
+        </div>
+
+        <!-- navlink -->
+        <nav>
+          <div class="wrapper-link">
+            <a data-id="0" href="#" class="nav-link">desk</a>
+          </div>
+          <div class="wrapper-link">
+            <a data-id="1" href="#" class="nav-link">wall</a>
+          </div>
+          <div class="wrapper-link">
+            <a data-id="2" href="#" class="nav-link">functional</a>
+          </div>
+          <div class="wrapper-link">
+            <a data-id="3" href="#" class="nav-link">etc.</a>
+          </div>
+        </nav>
+
+        <!-- login-btn -->
+        <div class="login-container">
+          <button id="login" class="outline" onclick="active(modal)">
+            <span class="material-icons"> login </span> login
+          </button>
+        </div>
+      </header>
+
+      <hr />
+
+      <main>
+        <!-- landingPage -->
+        <section class="landing-page padding-inline active">
+          <!-- hero -->
+          <article class="hero">
+            <!-- title -->
+            <h2 class="title-hero margin-block">make your room feel comfy.</h2>
+
+            <!-- image -->
+            <div class="big-img">
+              <div class="img1">
+                <img src="img/1.png" alt="" />
+                <div class="img2">
+                  <img src="img/2.png" alt="" />
+                </div>
+                <div class="img3">
+                  <img src="img/3.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- desc -->
+            <div class="desc">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquam, error facere consequatur culpa nobis corrupti,
+                consequuntur dolores eos quod cumque sit illum vel? Architecto,
+                explicabo!
+              </p>
+              <button id="shop" class="primary" onclick="shopNow()">
+                <span class="material-icons"> shopping_cart </span>shop now!
+              </button>
+            </div>
+          </article>
+
+          <!-- browse -->
+          <article class="browse">
+            <!-- title -->
+            <h3 class="big-title">browse</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+              nulla numquam dolores, assumenda nam reiciendis quas repellat
+              quidem unde eos.
+            </p>
+            <div class="wrap-card">
+              <!-- card -->
+              <div class="card">
+                <!-- image -->
+                <div class="image new"></div>
+
+                <!-- desc -->
+                <div class="card-desc">
+                  <h5 class="title">new arrival</h5>
+                  <p class="desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quis doloribus, iusto voluptatum soluta vero dolores!
+                  </p>
+                  <a href="" class="card-link">browse</a>
+                </div>
+              </div>
+
+              <!-- card -->
+              <div class="card">
+                <!-- image -->
+                <div class="image essential"></div>
+
+                <!-- desc -->
+                <div class="card-desc">
+                  <h5 class="title">the essential</h5>
+                  <p class="desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quis doloribus, iusto voluptatum soluta vero dolores!
+                  </p>
+                  <a href="" class="card-link">browse</a>
+                </div>
+              </div>
+
+              <!-- desc -->
+              <div class="card">
+                <!-- image -->
+                <div class="image liked"></div>
+
+                <!-- desc -->
+                <div class="card-desc">
+                  <h5 class="title">most liked</h5>
+                  <p class="desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quis doloribus, iusto voluptatum soluta vero dolores!
+                  </p>
+                  <a href="" class="card-link">browse</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- product -->
+        <section class="product padding-inline">
+          <article class="search-filter-sort">
+            <div class="">
+              <button onclick="active(filterContainer)" class="filter outline">
+                <span class="material-icons"> filter_list </span>filter
+              </button>
+            </div>
+
+            <div class="search-wrapper">
+              <span class="material-icons"> search </span>
+              <form action="" method="post">
+                <input type="text" name="" id="" placeholder="Search..." />
+              </form>
+              <a href="#"> <span class="material-icons"> cancel </span></a>
+            </div>
+
+            <div class="">
+              <button class="sort outline" onclick="active(sortDropDown)">
+                <span class="material-icons"> sort </span>sort
+              </button>
+              <div id="sortDropDown">
+                <a class="dropMenu">Termurah</a>
+                <a class="dropMenu">Termahal</a>
+                <a class="dropMenu">a-z</a>
+                <a class="dropMenu">z-a</a>
+              </div>
+            </div>
+          </article>
+
+          <div id="filter-container">
+            <div class="">
+              <div class="">
+                <label for="">color</label>
+                <button class="outline dropDown">
+                  white <span class="material-icons"> expand_more </span>
+                </button>
+              </div>
+
+              <div class="">
+                <label for="">type</label>
+                <button class="outline dropDown">
+                  modern <span class="material-icons"> expand_more </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- desk -->
+          <section class="item desk">
+            <article>
+              <h3 class="big-title">desk</h3>
+
+              <div class="item-container">
+                <!-- card -->
+                <div class="item-card">
+                  <div class="item-img"></div>
+                  <div class="item-desc">
+                    <p class="sub-1">Lorem ipsum dolor sit amet.</p>
+                    <p class="price">Rp. XX.xxx</p>
+                  </div>
+                  <div class="add-basket toggle-btn">
+                    <span class="material-icons"> add_shopping_cart </span>
+                  </div>
+                </div>
+
+                <!-- card -->
+                <div class="item-card">
+                  <div class="item-img"></div>
+                  <div class="item-desc">
+                    <p class="sub-1">Lorem ipsum dolor sit amet.</p>
+                    <p class="price">Rp. XX.xxx</p>
+                  </div>
+                  <div class="add-basket toggle-btn">
+                    <span class="material-icons"> add_shopping_cart </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- wall -->
+          <section class="item wall">
+            <article>
+              <h3 class="big-title">wall</h3>
+
+              <div class="item-container">
+                <!-- card -->
+                <div class="item-card">
+                  <div class="item-img"></div>
+                  <div class="item-desc">
+                    <p class="sub-1">Lorem ipsum dolor sit amet.</p>
+                    <p class="price">Rp. XX.xxx</p>
+                  </div>
+                  <div class="add-basket toggle-btn">
+                    <span class="material-icons"> add_shopping_cart </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- func -->
+          <section class="item func">
+            <article>
+              <h3 class="big-title">functional</h3>
+
+              <div class="item-container">
+                <!-- card -->
+                <div class="item-card">
+                  <div class="item-img"></div>
+                  <div class="item-desc">
+                    <p class="sub-1">Lorem ipsum dolor sit amet.</p>
+                    <p class="price">Rp. XX.xxx</p>
+                  </div>
+                  <div class="add-basket toggle-btn">
+                    <span class="material-icons"> add_shopping_cart </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- etc. -->
+          <section class="item etc">
+            <article>
+              <h3 class="big-title">etc.</h3>
+
+              <div class="item-container">
+                <!-- card -->
+                <div class="item-card">
+                  <div class="item-img"></div>
+                  <div class="item-desc">
+                    <p class="sub-1">Lorem ipsum dolor sit amet.</p>
+                    <p class="price">Rp. XX.xxx</p>
+                  </div>
+                  <div class="add-basket toggle-btn">
+                    <span class="material-icons"> add_shopping_cart </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+        </section>
+      </main>
+
+      <footer>
+        <p>n0tmywork prod.</p>
+      </footer>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
