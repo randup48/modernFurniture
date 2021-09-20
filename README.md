@@ -1,2 +1,2 @@
-# modernFurniture
-Responsive design web for E-Commerce
+# HTML - modernFurniture
+Responsive web design for E-Commerce
