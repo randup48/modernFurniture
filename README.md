@@ -1,2 +1,10 @@
 # HTML - modernFurniture
-Responsive web design for E-Commerce
+EN: Furniture E-Commerce Web Front End 
+
+## Status
+END OF LIFE
+
+## Requirements
+1. HTML
+2. SCSS
+3. TYPESCRIPT
