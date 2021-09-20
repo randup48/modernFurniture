@@ -1,5 +1,5 @@
 # HTML - modernFurniture
-EN: Furniture E-Commerce Web Front End 
+Responsive web design for E-commerce
 
 ## Status
 END OF LIFE
